@@ -31,6 +31,7 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     padding-block: 4.4rem;
+    min-height: 100%;
 }
 
 /*
@@ -96,7 +97,7 @@ h6 {
 .top-part,
 .middle-part,
 .bottom-part {
-    padding: 1.5rem 1.5rem 0.9rem 1.5rem;
+    padding: 1.4rem 1.5rem 0.9rem 1.5rem;
 }
 
 .top-part {
@@ -127,31 +128,131 @@ h6 {
     background-color: var(--CYAN);
 }
 
-.subscription {}
-
-.price {}
-
-.price span {
-    color: #96d4d2;
+.subscription {
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin-bottom: 0.6rem;
 }
 
-.details-middle {}
+.price-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.1rem;
+}
+
+.price {
+    font-size: 1.8rem;
+}
+
+.per-month {
+    font-size: 1rem;
+    color: #96d4d2;
+    margin-left: 0.8rem;
+}
+
+.details-middle {
+    color: #caf7f4;
+    margin-bottom: 1.7rem;
+}
 
 .signup-btn {
     background-color: var(--BRIGHT-YELLOW);
     border: none;
     padding-block: 0.72rem;
+    margin-bottom: 0.65rem;
     width: 100%;
     border-radius: 0.3rem;
     color: white;
+    box-shadow: 0 0.75rem 0.6rem 0.03rem hsla(0, 0%, 0%, 0.08);
 }
 
-.why-us {}
+.signup-btn:hover {
+    cursor: pointer;
+    background-color: hsl(71, 82%, 68%);
+    ;
+}
+
+.why-us {
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin-bottom: 0.9rem;
+}
 
 .bottom-part {
     background-color: #4abebd;
+    padding-bottom: 1.45rem;
 }
 
 .details-bottom span {
     display: block;
+    font-size: 0.85rem;
+    color: #bae7e4;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-container {
+        width: min(39.689rem, 90%);
+        display: flex;
+        flex-direction: column;
+        margin-inline: 0;
+        border-radius: 0.6rem;
+        box-shadow: 0 0.5rem 0.9rem 0.59rem hsla(0, 0%, 0%, 0.06);
+    }
+
+    .top-part,
+    .middle-part,
+    .bottom-part {
+        padding: 2.4rem 2.4rem 2.3rem 2.4rem;
+    }
+
+    .middle-and-bottom {
+        display: flex;
+        width: 100%;
+    }
+
+    .middle-and-bottom>* {
+        width: 100%;
+    }
+
+    .join-us {
+        font-size: 1.5rem;
+        margin-top: -0.15rem;
+    }
+
+    .guarantee {
+        font-size: 1.1rem;
+        margin-top: -0.05rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .details-top {
+        font-size: 1rem;
+        margin-bottom: 0.27rem;
+    }
+
+    .subscription {
+        margin-bottom: 0.55rem;
+    }
+
+    .price-wrapper {
+        margin-bottom: -0.05rem;
+    }
+
+    .price {
+        font-size: 2rem;
+    }
+
+    .signup-btn {
+        margin-bottom: 0;
+    }
+
+    .details-bottom span {
+        font-size: 0.83rem;
+    }
 }
